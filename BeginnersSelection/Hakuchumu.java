@@ -6,8 +6,31 @@ public class Hakuchumu {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) {
-        int n = sc.nextInt();
-        out.println(n);
+        String s = sc.next();
+
+        String[] words = {"dreamer", "eraser", "dream", "erase"};
+
+        boolean ok = true;
+        while (!s.isEmpty()) {
+            boolean matched = false;
+
+            for (String w : words) {
+                if (s.endsWith(w)) {
+                    s = s.substring(0, s.length() - w.length());
+                    matched = true;
+                    break;
+                }
+            }
+            if (!matched) {
+                ok = false;
+                break;
+            }
+        }
+        if (ok) {
+            out.println("YES");
+        } else {
+            out.println("NO");
+        }
         out.flush();
     }
 
