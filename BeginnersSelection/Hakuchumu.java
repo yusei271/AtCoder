@@ -6,42 +6,8 @@ public class Hakuchumu {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) {
-        String S = sc.next();
-
-        StringBuilder sb = new StringBuilder(S);
-        String reversedS = sb.reverse().toString();
-
-        String[] words = {"dream", "dreamer", "erase", "eraser"};
-        String[] reversedWords = new String[4];
-        for (int i = 0; i < 4; i++) {
-            reversedWords[i] = new StringBuilder(words[i]).reverse().toString();
-        }
-
-        int i = 0;
-        boolean canConstruct = true;
-
-        while (i < reversedS.length()) {
-            boolean matched = false;
-
-            for (String word : reversedWords) {
-                if (reversedS.startsWith(word, i)) {
-                    i += word.length();
-                    matched = true;
-                    break;
-                }
-            }
-
-            if (!matched) {
-                canConstruct = false;
-                break;
-            }
-        }
-
-        if (canConstruct) {
-            out.println("YES");
-        } else {
-            out.println("NO");
-        }
+        int n = sc.nextInt();
+        out.println(n);
         out.flush();
     }
 

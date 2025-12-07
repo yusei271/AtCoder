@@ -6,28 +6,8 @@ public class CardGameForTwo {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) {
-        int N = sc.nextInt();
-        int[] a = new int[N];
-        for (int i = 0; i < N; i++) {
-            a[i] = sc.nextInt();
-        }
-
-        // O(NlogN)
-        Arrays.sort(a);
-
-        int aliceScore = 0;
-        int bobScore = 0;
-
-        for (int i = 0; i < N; i++) {
-            int cardValue = a[N - 1 -i];
-
-            if (i % 2 == 0) {
-                aliceScore += cardValue;
-            } else {
-                bobScore += cardValue;
-            }
-        }
-        out.println(aliceScore - bobScore);
+        int n = sc.nextInt();
+        out.println(n);
         out.flush();
     }
 

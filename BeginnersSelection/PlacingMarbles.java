@@ -6,15 +6,8 @@ public class PlacingMarbles {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) {
-        String s = sc.next();
-
-        int count = 0;
-        for (int i = 0; i < 3; i++) {
-            if (s.charAt(i) == '1') {
-                count++;
-            }
-        }
-        out.println(count);
+        int n = sc.nextInt();
+        out.println(n);
         out.flush();
     }
 

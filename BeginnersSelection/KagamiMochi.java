@@ -6,22 +6,8 @@ public class KagamiMochi {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) {
-        int N = sc.nextInt();
-        int[] d = new int[N];
-        for (int i = 0; i < N; i++) {
-            d[i] = sc.nextInt();
-        }
-
-        Arrays.sort(d);
-
-        int count = 1;
-
-        for (int i = 1; i < N; i++) {
-            if (d[i] != d[i - 1]) {
-                count++;
-            }
-        }
-        out.println(count);
+        int n = sc.nextInt();
+        out.println(n);
         out.flush();
     }
 

@@ -6,16 +6,8 @@ public class Product {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) {
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int product = a * b;
-
-        if (product % 2 == 0) {
-            out.println("Even");
-        } else {
-            out.println("Odd");
-        }
-        
+        int n = sc.nextInt();
+        out.println(n);
         out.flush();
     }
 

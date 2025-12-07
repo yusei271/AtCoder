@@ -6,25 +6,8 @@ public class SomeSums {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) {
-        int N = sc.nextInt();
-        int A = sc.nextInt();
-        int B = sc.nextInt();
-
-        int totalSum = 0;
-        for (int i = 1; i <= N; i++) {
-            int digitSum = 0;
-            int temp = i;
-
-            while (temp > 0) {
-                digitSum += temp % 10;
-                temp /= 10;
-            }
-
-            if (digitSum >= A && digitSum <= B) {
-                totalSum += i;
-            }
-        }
-        out.println(totalSum);
+        int n = sc.nextInt();
+        out.println(n);
         out.flush();
     }
 

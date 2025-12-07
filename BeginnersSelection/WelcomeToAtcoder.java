@@ -6,20 +6,11 @@ public class WelcomeToAtcoder {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) {
-        // a, b, c, s を読む
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
-        String s = sc.next();
-
-        int sum = a + b + c;
-
-        // a + b + c と s を空白区切りで出力
-        out.println(sum + " " + s);
+        int n = sc.nextInt();
+        out.println(n);
         out.flush();
     }
 
-    // ===== テンプレ =====
     static class FastScanner {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer("");
