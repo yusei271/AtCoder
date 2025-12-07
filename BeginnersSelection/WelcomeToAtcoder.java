@@ -6,8 +6,11 @@ public class WelcomeToAtcoder {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) {
-        int n = sc.nextInt();
-        out.println(n);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        String s = sc.next();
+        out.println(a + b + c + " " + s);
         out.flush();
     }
 
