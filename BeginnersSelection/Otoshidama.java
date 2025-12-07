@@ -6,8 +6,30 @@ public class Otoshidama {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) {
-        int n = sc.nextInt();
-        out.println(n);
+        int N = sc.nextInt();
+        int Y = sc.nextInt();
+
+        int resX = -1; // result
+        int resY = -1;
+        int resZ = -1;
+
+        for (int x = 0; x <= N; x++) {
+            for (int y = 0; y <= N - x; y++) {
+                int z = N - x - y;
+                int total = 10000 * x + 5000 * y + 1000 * z;
+
+                if (total == Y) {
+                    resX = x;
+                    resY = y;
+                    resZ = z;
+                    break;
+                }
+            }
+            if (resX != -1) {
+                break;
+            }
+        }
+        out.println(resX + " " + resY + " " + resZ);
         out.flush();
     }
 
