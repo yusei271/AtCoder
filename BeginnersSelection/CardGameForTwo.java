@@ -6,8 +6,26 @@ public class CardGameForTwo {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) {
-        int n = sc.nextInt();
-        out.println(n);
+        int N = sc.nextInt();
+        int[] a = new int[N];
+
+        for (int i = 0; i < N; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        Arrays.sort(a);
+
+        int sumAlice = 0;
+        int sumBob = 0;
+
+        for (int i = 0; i < N; i++) {
+            if ((N - i) % 2 == 0) {
+                sumAlice += a[N - 1 - i];
+            } else {
+                sumBob += a[N - 1 - i];
+            }
+        }
+        out.println(sumAlice - sumBob);
         out.flush();
     }
 
